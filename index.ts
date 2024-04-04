@@ -1,0 +1,2 @@
+export { useUrlQueryManager as useUrlQueryManagerApp } from './src/hooks/app/use-url-query-manager.hook';
+export { useUrlQueryManager as useUrlQueryManagerPages } from './src/hooks/page/use-url-query-manager.hook';

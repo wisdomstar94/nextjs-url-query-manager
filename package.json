@@ -1,27 +1,40 @@
 {
-  "name": "nextjs-url-query-manager",
-  "version": "0.0.1",
+  "name": "@wisdomstar94/nextjs-url-query-manager",
+  "version": "0.0.1-test.1",
+  "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "next dev",
+    "pack:build": "node ./build.esbuild.js",
+    "pack:build:tsc": "tsc --project ./tsconfig.package.json",
+    "dev": "next dev -p 3330",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3330",
     "lint": "next lint"
   },
+  "repository": "https://github.com/wisdomstar94/nextjs-url-query-manager",
+  "main": "index.js",
   "dependencies": {
+    "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.4"
+    "react-dom": "^18"
+  },
+  "peerDependencies": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "esbuild": "^0.20.2",
+    "esbuild-css-modules-plugin": "^3.1.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.4"
+    "typescript": "^5"
   }
 }
