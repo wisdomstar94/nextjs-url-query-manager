@@ -1,16 +1,10 @@
 "use client"
 
 import { useUrlQueryManager } from "@/hooks/app/use-url-query-manager.hook";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Page() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const urlQueryManager = useUrlQueryManager({
-    pathname, searchParams, router,
-  });
+  const urlQueryManager = useUrlQueryManager();
 
   useEffect(() => {
     console.log('@urlQueryManager.urlQueryString', urlQueryManager.urlQueryString);

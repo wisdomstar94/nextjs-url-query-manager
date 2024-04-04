@@ -1,10 +1,8 @@
 import { useUrlQueryManager } from "@/hooks/page/use-url-query-manager.hook";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Page() {
-  const router = useRouter();
-  const urlQueryManager = useUrlQueryManager({ router });
+  const urlQueryManager = useUrlQueryManager();
 
   useEffect(() => {
     console.log('@urlQueryManager.urlQueryString', urlQueryManager.urlQueryString);
