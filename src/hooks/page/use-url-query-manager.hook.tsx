@@ -1,12 +1,11 @@
-import { useRouter } from "next/router";
 import { Props } from "./use-url-query-manager.interface";
 import { useEffect, useState } from "react";
 
 /** next.js 의 pages router 사용 가능한 훅입니다. */
-export function useUrlQueryManager(props?: Props) {
+export function useUrlQueryManager(props: Props) {
   const [urlQueryString, setUrlQueryString] = useState<string>();
   const [urlQueryMap, setUrlQueryMap] = useState<Map<string, string | string[]>>(new Map());
-  const router = useRouter();
+  const router = props.router;
 
   function removeUrlQuery(key: string) {
     const newUrlQueryMap = new Map(urlQueryMap);
