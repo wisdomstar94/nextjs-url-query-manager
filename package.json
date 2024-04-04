@@ -1,6 +1,6 @@
 {
   "name": "@wisdomstar94/nextjs-url-query-manager",
-  "version": "0.0.1-test.4",
+  "version": "0.0.1",
   "license": "MIT",
   "private": false,
   "scripts": {
