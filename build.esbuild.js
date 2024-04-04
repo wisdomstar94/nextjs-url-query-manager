@@ -8,7 +8,7 @@ esbuild.build({
   sourcemap: false,
   minify: true,
   format: 'cjs',
-  platform: 'browser',
+  platform: 'node',
   jsx: 'automatic',
   outfile: "index.js",
   tsconfig: "./tsconfig.package.json",
