@@ -1,15 +1,16 @@
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Props } from "./use-url-query-manager.interface";
 import { useEffect, useState } from "react";
 
 /** next.js 의 app router 에서 사용 가능한 훅입니다. */
-export function useUrlQueryManager(props?: Props) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+export function useUrlQueryManager(props: Props) {
+  const {
+    pathname,
+    searchParams,
+    router,
+  } = props;
   const [urlQueryString, setUrlQueryString] = useState<string>();
   const [urlQueryMap, setUrlQueryMap] = useState<Map<string, string | string[]>>(new Map());
-  const router = useRouter();
-
+  
   function removeUrlQuery(key: string) {
     const newUrlQueryMap = new Map(urlQueryMap);
     newUrlQueryMap.delete(key);
